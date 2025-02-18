@@ -1,5 +1,6 @@
 import './main.css';
-import Icon_p from './Icon_p'
+import React from 'react';
+import Icon_p from './Icon_p';
 
 let article = [];
 for(let i = 0 ; i < 4; i++)

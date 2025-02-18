@@ -1,12 +1,17 @@
 {
   "name": "react-module1",
   "version": "1.0.0",
-  "main": "src/Icon_box.js",
-  "files":["src","src/img"],
+  "main": "./dist/Icon_box.js",
+  "module": "./src/Icon_box.js",
+  "files": [
+    "src",
+    "src/img"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack",
+    "wbuild": "babel src --out-dir dist && webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +28,11 @@
     "@babel/preset-env": "^7.26.8",
     "@babel/preset-react": "^7.26.3",
     "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"

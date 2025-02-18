@@ -1,25 +1,48 @@
-const path = require("path");
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: "./src/index.js",  // 시작점이 될 파일
+  entry: './src/Icon_box.js', 
   output: {
-    path: path.resolve(__dirname, "dist"),  // 빌드된 파일의 저장 경로
-    filename: "bundle.js",  // 출력 파일 이름
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
-        test: /\.js$/,  // .js 파일에 대해 Babel을 실행
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'img/',
+              publicPath: 'img/',
+            },
+          },
+        ],
       },
     ],
   },
-  devServer: {
-    static: "./public",  // 개발 서버에서 제공할 정적 파일
-    hot: true,
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/main.css', to: 'main.css' } // main.css를 dist로 복사
+      ],
+    }),
+  ],
+  resolve: {
+    extensions: ['.js', '.css'],
   },
-  mode: "development",  // 개발 모드 (배포 시 "production"으로 변경)
 };
