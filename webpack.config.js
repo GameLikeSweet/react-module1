@@ -2,10 +2,13 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/Icon_box.js', 
+  entry: './src/Icon_box.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'Icon_box.js',
+    library: {
+      type: 'commonjs2',
+    },
   },
   module: {
     rules: [
