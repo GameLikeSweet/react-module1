@@ -7,8 +7,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     library: {
-      type: 'commonjs2',
+      type: 'module',
     },
+  },
+  experiments: {
+    outputModule: true, // 반드시 추가!
   },
   module: {
     rules: [
@@ -41,7 +44,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/main.css', to: 'main.css' } // main.css를 dist로 복사
+        { from: 'src/main.css', to: 'main.css' }
       ],
     }),
   ],
