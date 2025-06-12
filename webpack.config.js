@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/Icon_box.js', 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'Icon_box.js',
   },
   module: {
     rules: [
