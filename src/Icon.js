@@ -7,7 +7,7 @@ import img4 from '../src/img/icon4.png'
 
 let img = [img1, img2, img3, img4];
 
-function  icon ({i}) {
+function  Icon ({i}) {
     return (
         <div>
             <img src = {img[i]}/>
@@ -16,4 +16,4 @@ function  icon ({i}) {
     );
 }
 
-export default icon;
+export default Icon;

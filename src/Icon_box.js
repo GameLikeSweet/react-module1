@@ -8,7 +8,7 @@ for(let i = 0 ; i < 4; i++)
     article.push(<Icon_p i = {i}/>)
 }
 
-function icon_box () {
+function Icon_box () {
     return(
         <div className='icon_box'>
             {article}
@@ -16,4 +16,4 @@ function icon_box () {
     );
 }
 
-export default icon_box;
+export default Icon_box;

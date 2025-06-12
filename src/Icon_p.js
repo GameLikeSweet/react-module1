@@ -2,7 +2,7 @@ import './main.css';
 import Icon from './Icon.js';
 import React from 'react';
 
-function icon_p ({i}) {
+function Icon_p ({i}) {
     return(
         <p>
             <Icon i = {i}/>
@@ -11,4 +11,4 @@ function icon_p ({i}) {
     );
 }
 
-export default icon_p;
+export default Icon_p;
