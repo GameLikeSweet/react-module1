@@ -1,7 +1,7 @@
 {
   "name": "react-module1",
   "version": "1.0.0",
-  "main": "./dist/Icon_box.js",
+  "main": "./dist/bundle.js",
   "files": [
     "dist"
   ],

@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/Icon_box.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'Icon_box.js',
+    filename: 'bundle.js',
     library: {
       type: 'commonjs2',
     },
